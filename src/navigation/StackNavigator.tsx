@@ -8,8 +8,14 @@ const Stack = createNativeStackNavigator();
 export default function StackNavigator() {
     return (
         <Stack.Navigator initialRouteName="Home">
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="Profile" component={ProfileScreen} />
+            <Stack.Screen
+                name="Home"
+                component={ HomeScreen }
+                options={{ title: 'Welcome' }} />
+            <Stack.Screen 
+                name="Profile" 
+                component={ProfileScreen}
+                options={{ title: 'PRofile'}} />
         </Stack.Navigator>
     );
 }
